@@ -9,6 +9,10 @@ public class Chaudron {
 		this.forcePotion = forcePotion;
 	}
 	
+	public int getForcePotion() {
+		return forcePotion;
+	}
+
 	public boolean resterPotion() {
 		if (quantitePotion > 0) {
 			return true;
@@ -19,6 +23,10 @@ public class Chaudron {
 	}
 	
 	public int prendreLouche() {
+		quantitePotion = quantitePotion - 1;
+		if (quantitePotion == 0) {
+			forcePotion = 0;
+		}
 		return 0;
 	}
 }
