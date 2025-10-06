@@ -15,8 +15,8 @@ public class TestGaulois{
 		obelix.parler("Bonjour Astérix. Ca te dirais d'aller loin d'ici ?");
 		asterix.parler("Oe, volontier");
 		
-		System.out.println("Dans la forêt" + asterix.getNom() + "et" + obelix.getNom() + 
-				"tombent nez à pif avec le romaing"+ minus.getNom());
+		System.out.println("Dans la forêt " + asterix.getNom() + " et " + obelix.getNom() + 
+				" tombent nez à pif avec le romaing "+ minus.getNom());
 		
 		for(int i=0; i<4; i++){
 			asterix.frapper(minus);
