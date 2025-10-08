@@ -13,7 +13,7 @@ public class TestGaulois{
 		Druide panoramix = new Druide("Panoramix", 2);
 		
 		System.out.println("Dans la forêt " + asterix.getNom() + " et " + obelix.getNom() + 
-				" tombent nez à pif avec le romaing "+ minus.getNom());
+				" tombent nez à pif avec le romaing "+ brutus.getNom());
 		panoramix.fabriquerPotion(4, 3);
 		panoramix.booster(obelix);
 		panoramix.booster(asterix);

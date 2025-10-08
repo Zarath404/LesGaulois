@@ -41,7 +41,7 @@ public class Village {
 	}
 	
 	public void afficherVillageois() {
-		System.out.println("Dans le village \"" + nom + "\" du chef \"" + chef + "\" vivent les légendaires gaulois :");
+		System.out.println("Dans le village \"" + nom + "\" du chef \"" + chef + "\" vivent les l gendaires gaulois :");
 		for(Gaulois gaulois : villageois) {
 			if (gaulois == null) {break;}
 			System.out.println("- " + gaulois);
