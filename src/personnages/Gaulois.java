@@ -5,12 +5,11 @@ import objets.Equipement;
 
 public class Gaulois {
 	private String nom;
-//	private int force;
+	private int force;
+	private int nbTrophees;
 	private Village village;
 	private int effetPotion = 1;
-	private int force, nb_trophees;
-	private Equipement trophees[] = new Equipement[100];
-
+	private Equipement[] trophees = new Equipement[100];
 	
 	public Gaulois(String nom, int force) {
 	this.nom = nom;
@@ -19,8 +18,12 @@ public class Gaulois {
 	
 	public String getNom() {
 	return nom;
-	}	
+	}
 	
+	public int getForce() {
+		return force;
+	}
+
 	public void setVillage(Village village) {
 		this.village = village;
 	}
@@ -36,9 +39,9 @@ public class Gaulois {
 //	}
 	
 	private String prendreParole() {
-		String texte = "Le gaulois " + nom + " : ";
-		return texte;
+		return "Le gaulois " + nom + " : ";
 	}
+
 	
 	public String toString() {
 		return nom;
@@ -46,7 +49,7 @@ public class Gaulois {
 	
 //	public void frapper(Romain romain) {
 //		String nomRomain = romain.getNom();
-//		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + nomRomain);
+//		System.out.println(nom + " envoie un grand coup dans la m choire de " + nomRomain);
 //		int forceCoup = force * effetPotion;
 //		forceCoup = forceCoup/3;
 //		romain.recevoirCoup(forceCoup);
@@ -56,15 +59,16 @@ public class Gaulois {
 //	}
 	
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la mâchoire de " +
+		System.out.println(nom + " envoie un grand coup dans la m choire de " +
 		romain.getNom());
-		Equipement trophees[] = romain.recevoirCoup((force / 3) * effetPotion);
-		for (int i = 0; trophees != null && i < trophees.length; i++,
-			nb_trophees++) {
-			this.trophees[nb_trophees] = trophees[i];
+		Equipement[] recompense = romain.recevoirCoup((force / 3) * effetPotion);
+		for (int i = 0; recompense != null && i < recompense.length; i++,
+			nbTrophees++) {
+			this.trophees[nbTrophees] = recompense[i];
 		}
 		return;
 	}
+
 	
 	public void sePresenter() {
 		System.out.println("Le Gaulois  " + nom + ": Bonjour, je m'appelle " +  nom + ".");
@@ -82,4 +86,3 @@ public class Gaulois {
 		}
 	}
 }
-
