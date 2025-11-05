@@ -2,11 +2,12 @@ package personnages;
 
 import objets.Village;
 import objets.Equipement;
+import objets.Musee;
 
 public class Gaulois {
 	private String nom;
 	private int force;
-	private int nbTrophees;
+	private int nbTrophees = 0;
 	private Village village;
 	private int effetPotion = 1;
 	private Equipement[] trophees = new Equipement[100];
@@ -66,7 +67,6 @@ public class Gaulois {
 			nbTrophees++) {
 			this.trophees[nbTrophees] = recompense[i];
 		}
-		return;
 	}
 
 	
@@ -83,6 +83,17 @@ public class Gaulois {
 		}
 		else {
 			System.out.println("Je voyage de village en village");
+		}
+	}
+	
+	public void faireUneDonnation(Musee musee) {
+		if (nbTrophees > 0) {
+			this.parler("Je donne tous mes trophees :");
+			for (int i = 0; i < nbTrophees; i++) {
+				musee.donnerTrophee(this, trophees[i]);
+				this.parler("- " + trophees[i].toString());
+				nbTrophees--;
+			}
 		}
 	}
 }

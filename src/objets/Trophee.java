@@ -7,8 +7,8 @@ public class Trophee {
 	private Equipement equipement;
 	
 	public Trophee(Gaulois gaulois, Equipement equipement) {
-		this.equipement=equipement;
-		this.gaulois=gaulois;
+		this.gaulois = gaulois;
+		this.equipement = equipement;
 	}
 
 	public Gaulois getGaulois() {
@@ -19,7 +19,7 @@ public class Trophee {
 		return equipement;
 	}
 	
-	public String donnerNom() {
+	public String nom() {
 		return gaulois.getNom();
 	}
 }
